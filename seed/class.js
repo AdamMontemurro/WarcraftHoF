@@ -83,22 +83,70 @@ const main = async () => {
   })
   mage.save()
 
-  const rue = await new Class(
+  const warlock = await new Class(
     {
-      name: 'Rogue',
+      name: 'Warlock',
       role: 'Damage',
-      primary_attribute: 'Agility',
-      armor_type: 'Plate',
-      specs: 'Assassination, Outlaw, Subtlety',
+      primary_attribute: 'Intelect',
+      armor_type: 'Cloth',
+      specs: 'Affliction, Demonology, Destruction',
       img: 'placeholder'
   })
-  rogue.save()
+  warlock.save()
+  const monk = await new Class(
+    {
+      name: 'Monk',
+      role: 'Tank/Healer/Damage',
+      primary_attribute: 'Agility/Intelect',
+      armor_type: 'Leather',
+      specs: 'Brewmaster, Mistweaver, Windwalker',
+      img: 'placeholder'
+  })
+  monk.save()
 
+  const druid = await new Class(
+    {
+      name: 'Druid',
+      role: 'Tank/Healer/Damage',
+      primary_attribute: 'Agility/Intelect',
+      armor_type: 'Leather',
+      specs: 'Feral(tank), Feral(damage), Restoration, Balance',
+      img: 'placeholder'
+  })
+  druid.save()
 
+  const demon_hunter = await new Class(
+    {
+      name: 'Demon Hunter',
+      role: 'Tank/Damage',
+      primary_attribute: 'Agility',
+      armor_type: 'Leather',
+      specs: 'Havoc,Vengeance',
+      img: 'placeholder'
+  })
+  demon_hunter.save()
 
+  const death_knight = await new Class(
+    {
+      name: 'Death Knight',
+      role: 'Tank,Damage',
+      primary_attribute: 'Strength',
+      armor_type: 'Plate',
+      specs: 'Blood, Frost, Unholy',
+      img: 'placeholder'
+  })
+  death_knight.save()
 
-
-
+  const evoker = await new Class(
+    {
+      name: 'Evoker',
+      role: 'Healer/Damage',
+      primary_attribute: 'Intelect',
+      armor_type: 'Mail',
+      specs: 'Devastation, Preservation',
+      img: 'placeholder'
+  })
+  evoker.save()
 
 }
 
