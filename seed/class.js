@@ -39,16 +39,18 @@ const main = async () => {
   })
   hunter.save()
 
-  const paladin = await new Class(
+  const rogue = await new Class(
     {
       name: 'Rogue',
       role: 'Damage',
-      primary_attribute: 'Strength/Intelect',
+      primary_attribute: 'Agility',
       armor_type: 'Plate',
-      specs: 'Protection, Retribution, Holy',
+      specs: 'Assassination, Outlaw, Subtlety',
       img: 'placeholder'
   })
-  paladin.save()
+  rogue.save()
+
+  
 
 
 
