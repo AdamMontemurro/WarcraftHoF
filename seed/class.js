@@ -63,11 +63,11 @@ const main = async () => {
 
   const shaman = await new Class(
     {
-      name: 'Rogue',
-      role: 'Damage',
-      primary_attribute: 'Agility',
-      armor_type: 'Plate',
-      specs: 'Assassination, Outlaw, Subtlety',
+      name: 'Shaman',
+      role: 'Healer/Damage',
+      primary_attribute: 'Agility/Intelect',
+      armor_type: 'Mail',
+      specs: 'Elemental, Restoration, Enhancement',
       img: 'placeholder'
   })
   shaman.save()
