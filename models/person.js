@@ -9,7 +9,7 @@ const Person = new Schema(
     status: {type:String, required: true},
     involvements: {type:String, required: true},
     img: {type:String, required: false},
-  }
+  },
   {timestamps: true}
 )
 

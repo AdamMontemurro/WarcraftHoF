@@ -9,7 +9,7 @@ const Class = new Schema(
     armor_type: {type:String, required: true},
     specs: {type:String, required: true},
     img: {type:String, required: false},
-  }
+  },
   {timestamps: true}
 )
 
