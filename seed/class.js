@@ -9,7 +9,7 @@ const main = async () => {
   const warrior = await new Class(
     {
       name: 'Warrior',
-      role: 'Tank/DPS',
+      role: 'Tank/Damage',
       primary_attribute: 'Strength',
       armor_type: 'Plate',
       specs: 'Protection, Arms, Fury',
@@ -20,7 +20,7 @@ const main = async () => {
   const paladin = await new Class(
     {
       name: 'Paladin',
-      role: 'Tank/DPS/Healer',
+      role: 'Tank/Damage/Healer',
       primary_attribute: 'Strength/Intelect',
       armor_type: 'Plate',
       specs: 'Protection, Retribution, Holy',
@@ -31,7 +31,7 @@ const main = async () => {
   const hunter = await new Class(
     {
       name: 'Hunter',
-      role: 'DPS',
+      role: 'Damage',
       primary_attribute: 'Agility',
       armor_type: 'Mail',
       specs: 'Marksman, Survival, Beast Mastery',
@@ -41,8 +41,8 @@ const main = async () => {
 
   const paladin = await new Class(
     {
-      name: 'Paladin',
-      role: 'Tank/DPS/Healer',
+      name: 'Rogue',
+      role: 'Damage',
       primary_attribute: 'Strength/Intelect',
       armor_type: 'Plate',
       specs: 'Protection, Retribution, Holy',
