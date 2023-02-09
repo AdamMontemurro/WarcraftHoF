@@ -1,0 +1,23 @@
+{
+  "name": "warcrafthof",
+  "version": "1.0.0",
+  "description": "## 2/9/23",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamMontemurro/WarcraftHoF.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamMontemurro/WarcraftHoF/issues"
+  },
+  "homepage": "https://github.com/AdamMontemurro/WarcraftHoF#readme",
+  "dependencies": {
+    "mongoose": "^6.9.1"
+  }
+}
