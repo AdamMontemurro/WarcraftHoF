@@ -29,3 +29,4 @@ Application that renders out significant characters from the Warcrat Universe. G
 - [x]
 
 ### Resources
+[Trello](https://trello.com/b/eeFIDqTO/wow-hall-of-fame)
