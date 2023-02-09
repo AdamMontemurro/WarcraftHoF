@@ -50,7 +50,51 @@ const main = async () => {
   })
   rogue.save()
 
-  
+  const priest = await new Class(
+    {
+      name: 'Priest',
+      role: 'Healer/Damage',
+      primary_attribute: 'Intelect',
+      armor_type: 'Cloth',
+      specs: 'Holy, Discipline, Shadow',
+      img: 'placeholder'
+  })
+  priest.save()
+
+  const shaman = await new Class(
+    {
+      name: 'Rogue',
+      role: 'Damage',
+      primary_attribute: 'Agility',
+      armor_type: 'Plate',
+      specs: 'Assassination, Outlaw, Subtlety',
+      img: 'placeholder'
+  })
+  shaman.save()
+
+  const hunr = await new Class(
+    {
+      name: 'Hunter',
+      role: 'Damage',
+      primary_attribute: 'Agility',
+      armor_type: 'Mail',
+      specs: 'Marksman, Survival, Beast Mastery',
+      img: 'placeholder'
+  })
+  hunter.save()
+
+  const rue = await new Class(
+    {
+      name: 'Rogue',
+      role: 'Damage',
+      primary_attribute: 'Agility',
+      armor_type: 'Plate',
+      specs: 'Assassination, Outlaw, Subtlety',
+      img: 'placeholder'
+  })
+  rogue.save()
+
+
 
 
 
