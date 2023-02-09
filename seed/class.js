@@ -72,16 +72,16 @@ const main = async () => {
   })
   shaman.save()
 
-  const hunr = await new Class(
+  const mage = await new Class(
     {
-      name: 'Hunter',
+      name: 'Mage',
       role: 'Damage',
-      primary_attribute: 'Agility',
-      armor_type: 'Mail',
-      specs: 'Marksman, Survival, Beast Mastery',
+      primary_attribute: 'Intelect',
+      armor_type: 'Cloth',
+      specs: 'Arcance, Frost, Fire',
       img: 'placeholder'
   })
-  hunter.save()
+  mage.save()
 
   const rue = await new Class(
     {
