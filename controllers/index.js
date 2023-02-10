@@ -13,7 +13,7 @@ const getClasses = async (req, res) => {
 const getClassById = async (req, res) => {
   try {
       const { id } = req.params;
-      const classA = await Plant.findById(id)
+      const classA = await Class.findById(id)
       if (classA) {
           return res.status(200).json({ classA });
       }
@@ -22,6 +22,9 @@ const getClassById = async (req, res) => {
       return res.status(500).send(error.message);
   }
 }
+
+
+
 
 module.exports = {
   getClasses,

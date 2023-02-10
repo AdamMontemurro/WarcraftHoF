@@ -1,9 +1,11 @@
 const db = require('../db')
-const Class = require('../models/class')
+const Class = require('../models')
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error '))
 
 const main = async () => {
+
 
 
 
@@ -149,9 +151,35 @@ const main = async () => {
   })
   evoker.save()
 
+  const people = [
+
+    {
+      name: "Thrall",
+      race: "Orc",
+      class: shaman._id,
+      status: "Alive",
+      involvements: "Battle of Mt. Hyjal, Founding of Orgrimmar, The Shattering",
+      img: '../Pictures/Thrall.png',
+    },
+  
+    {
+      name: "Jaina Proudmoore",
+      race: "Human",
+      class: mage._id,
+      status: "Alive",
+      involvements: "The Third War, Founding of Theramore, Theramore's Fall",
+      img: '../Pictures/Jaina.png',
+    }
+  
+  ]
+  
+  // await Person.insertMany(people)
+  
+
 }
 
 const run = async () => {
+  await Class.deleteMany({})
   await main()
   // db.close()
 } 

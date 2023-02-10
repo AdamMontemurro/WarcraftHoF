@@ -7,9 +7,12 @@ router.get('/', (req,res)=>
   res.send('home')
 )
 
+
+
+
 router.get('/classes', controllers.getClasses)
 
-
+router.get('/classes/:id', controllers.getClassById)
 
 
 
