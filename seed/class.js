@@ -7,7 +7,6 @@ const main = async () => {
 
 
 
-
   const warrior = await new Class(
     {
       name: 'Warrior',
@@ -154,7 +153,7 @@ const main = async () => {
 
 const run = async () => {
   await main()
-  db.close()
+  // db.close()
 } 
 
 run()
