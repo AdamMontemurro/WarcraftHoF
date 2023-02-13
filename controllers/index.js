@@ -47,6 +47,14 @@ const deleteComment = async (req, res) => {
   }
 }
 
+const updateComment = async (req, res) => {
+  try {
+      const update = await Comment.findByIdAndUpdate(req.params.id, req.body, { new: true})
+      res.status(200).json(update)
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
 
 
 
@@ -55,5 +63,6 @@ module.exports = {
   getClasses,
   getClassById,
   newComment,
-  deleteComment
+  deleteComment,
+  updateComment
 }
