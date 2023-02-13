@@ -1,4 +1,5 @@
-const Class = require('../models/class')
+const {Class} = require('../models/')
+const {Comment} = require ("../models")
 
 
 const getClasses = async (req, res) => {
@@ -23,10 +24,17 @@ const getClassById = async (req, res) => {
   }
 }
 
-
+const newComment = async (req,res) => {
+  try {
+  const newComment = await new Comment(req.body)
+  await newComment.save()
+  return res.status(201).json({newComment})
+  } catch(error) {res.status(500).json({ error: error.message}) } 
+}
 
 
 module.exports = {
   getClasses,
-  getClassById
+  getClassById,
+  newComment
 }

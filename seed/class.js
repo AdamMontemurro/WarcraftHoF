@@ -5,9 +5,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error '))
 
 const main = async () => {
 
-
-
-
   const warrior = await new Class(
     {
       name: 'Warrior',
@@ -15,7 +12,7 @@ const main = async () => {
       primary_attribute: 'Strength',
       armor_type: 'Plate',
       specs: 'Protection, Arms, Fury',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/5KVWR5u.png'
     })
   warrior.save()
 
@@ -26,7 +23,7 @@ const main = async () => {
       primary_attribute: 'Strength/Intelect',
       armor_type: 'Plate',
       specs: 'Protection, Retribution, Holy',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/wJzmXt7.png'
     })
   paladin.save()
 
