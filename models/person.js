@@ -1,6 +1,6 @@
 const {Schema} = require('mongoose')
 
-const Person = new Schema(
+const personSchema = new Schema(
   {
     name: {type:String, required: true},
     race: {type:String, required: true},

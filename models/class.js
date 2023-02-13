@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Class = new Schema(
+const classSchema = new Schema(
   {
     name: {type:String, required: true},
     role: {type:String, required: true},

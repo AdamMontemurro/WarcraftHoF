@@ -1,6 +1,5 @@
 const db = require('../db')
-const Class = require('../models')
-
+const { Class, Person } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error '))
 
@@ -17,7 +16,7 @@ const main = async () => {
       armor_type: 'Plate',
       specs: 'Protection, Arms, Fury',
       img: 'placeholder'
-  })
+    })
   warrior.save()
 
   const paladin = await new Class(
@@ -28,7 +27,7 @@ const main = async () => {
       armor_type: 'Plate',
       specs: 'Protection, Retribution, Holy',
       img: 'placeholder'
-  })
+    })
   paladin.save()
 
   const hunter = await new Class(
@@ -39,7 +38,7 @@ const main = async () => {
       armor_type: 'Mail',
       specs: 'Marksman, Survival, Beast Mastery',
       img: 'placeholder'
-  })
+    })
   hunter.save()
 
   const rogue = await new Class(
@@ -50,7 +49,7 @@ const main = async () => {
       armor_type: 'Plate',
       specs: 'Assassination, Outlaw, Subtlety',
       img: 'placeholder'
-  })
+    })
   rogue.save()
 
   const priest = await new Class(
@@ -61,7 +60,7 @@ const main = async () => {
       armor_type: 'Cloth',
       specs: 'Holy, Discipline, Shadow',
       img: 'placeholder'
-  })
+    })
   priest.save()
 
   const shaman = await new Class(
@@ -72,7 +71,7 @@ const main = async () => {
       armor_type: 'Mail',
       specs: 'Elemental, Restoration, Enhancement',
       img: 'placeholder'
-  })
+    })
   shaman.save()
 
   const mage = await new Class(
@@ -83,7 +82,7 @@ const main = async () => {
       armor_type: 'Cloth',
       specs: 'Arcance, Frost, Fire',
       img: 'placeholder'
-  })
+    })
   mage.save()
 
   const warlock = await new Class(
@@ -94,7 +93,7 @@ const main = async () => {
       armor_type: 'Cloth',
       specs: 'Affliction, Demonology, Destruction',
       img: 'placeholder'
-  })
+    })
   warlock.save()
   const monk = await new Class(
     {
@@ -104,7 +103,7 @@ const main = async () => {
       armor_type: 'Leather',
       specs: 'Brewmaster, Mistweaver, Windwalker',
       img: 'placeholder'
-  })
+    })
   monk.save()
 
   const druid = await new Class(
@@ -115,7 +114,7 @@ const main = async () => {
       armor_type: 'Leather',
       specs: 'Feral(tank), Feral(damage), Restoration, Balance',
       img: 'placeholder'
-  })
+    })
   druid.save()
 
   const demon_hunter = await new Class(
@@ -126,7 +125,7 @@ const main = async () => {
       armor_type: 'Leather',
       specs: 'Havoc,Vengeance',
       img: 'placeholder'
-  })
+    })
   demon_hunter.save()
 
   const death_knight = await new Class(
@@ -137,7 +136,7 @@ const main = async () => {
       armor_type: 'Plate',
       specs: 'Blood, Frost, Unholy',
       img: 'placeholder'
-  })
+    })
   death_knight.save()
 
   const evoker = await new Class(
@@ -148,8 +147,9 @@ const main = async () => {
       armor_type: 'Mail',
       specs: 'Devastation, Preservation',
       img: 'placeholder'
-  })
+    })
   evoker.save()
+
 
   const people = [
 
@@ -161,7 +161,7 @@ const main = async () => {
       involvements: "Battle of Mt. Hyjal, Founding of Orgrimmar, The Shattering",
       img: '../Pictures/Thrall.png',
     },
-  
+
     {
       name: "Jaina Proudmoore",
       race: "Human",
@@ -170,18 +170,17 @@ const main = async () => {
       involvements: "The Third War, Founding of Theramore, Theramore's Fall",
       img: '../Pictures/Jaina.png',
     }
-  
+
   ]
-  
-  // await Person.insertMany(people)
-  
+
+  await Person.insertMany(people)
 
 }
 
 const run = async () => {
-  await Class.deleteMany({})
+
   await main()
   // db.close()
-} 
+}
 
 run()
