@@ -14,6 +14,8 @@ router.get('/classes', controllers.getClasses)
 
 router.get('/classes/:id', controllers.getClassById)
 
+
+router.get('/comments/get', controllers.getComments)
 router.post('/comments/create', controllers.newComment)
 
 router.delete('/comments/:id', controllers.deleteComment)
