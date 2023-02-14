@@ -88,7 +88,7 @@ const Comment = () => {
 
 
         {commentsArray.map((com)=>(
-        <CommentComp id={com._id} username={com.username} comment={com.comment} currentUser={userName}/>
+        <CommentComp  key={com._id} id={com._id} username={com.username} comment={com.comment} currentUser={userName}/>
         ))}
       </div>
     )

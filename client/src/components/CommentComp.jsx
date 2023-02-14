@@ -1,10 +1,14 @@
 import axios from "axios"
-
+import { useState } from "react"
+import Edit from "./Edit"
 
 
 
 
 const CommentComp = (props) => {
+
+  const [edit, setEdit] = useState(false)
+
 
   const handleDelete = async (e) => {
     e.preventDefault()
@@ -13,15 +17,25 @@ const CommentComp = (props) => {
 
 
 
+  const editComment =()=> {
+    setEdit(true)
+  }
+  const unmountEdit =()=> {
+    setEdit(false)
+  }
+  
 
-  if (props.username === props.currentUser) {
+
+  if ( props.username === props.currentUser ) {
     return (
       <div key={props.id}>
         <h3>User: {props.username}</h3>
         <p>{props.comment}</p>
-        <button>Edit</button>
+        <button onClick={editComment}>Edit</button>
         <button onClick={handleDelete}>Delete</button>
-
+        {edit ?
+        <Edit username={props.username} id={props.id} unmountEdit={unmountEdit}/> : null
+        }
       </div>
     )
   } else {
