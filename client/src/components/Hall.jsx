@@ -1,9 +1,15 @@
-import React from 'react'
+import Comment from "./Comment"
+import { useEffect, useState } from 'react'
+
 
 function Hall() {
+
+
+
   return (
     <div>
-      Hall of Fame
+      <h1>Hall of Fame</h1>
+      <Comment />
     </div>
   )
 }
