@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Login from './Login'
 import Logout from './Logout'
+import CommentComp from './CommentComp'
 import axios from 'axios'
 
 
@@ -31,8 +32,8 @@ const Comment = () => {
   const [comment, newComment] = useState(commentState)
 
   const login = () => setUser(true)
-
   const logout = () => setUser(false)
+
   const userChange = (e) => {
      newComment(
     {
@@ -85,6 +86,10 @@ const Comment = () => {
           </textarea><button type="submit" >submit</button>
         </form>
 
+
+        {commentsArray.map((com)=>(
+        <CommentComp id={com._id} username={com.username} comment={com.comment} currentUser={userName}/>
+        ))}
       </div>
     )
   } else {
