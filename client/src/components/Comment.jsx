@@ -6,6 +6,19 @@ import axios from 'axios'
 
 const Comment = () => {
 
+  const [commentsArray, setCommentsArray] = useState([])
+
+  const getComments = async () => {
+    try {
+      let response = await axios.get('http://localhost:3001/comments/get')
+      setCommentsArray(response.data.coms)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+
 
   const [user, setUser] = useState(false)
   const [userName, setName] = useState('')
@@ -47,6 +60,11 @@ const Comment = () => {
       }
     )
   }
+
+  useEffect(() => {
+    getComments()
+    
+  }, [commentSubmit])
 
 
   let comments
