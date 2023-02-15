@@ -6,17 +6,19 @@ const Classes = ({classes}) => {
 
 
   return (
-    <div className="classgrid">
-      <h1>Classes:</h1>
+    <div id="container">
+   <div className="classgrid">
+      <h1 id="Classes">Classes:</h1>
 
       {classes.map((each) => (
-        <div key={each._id} >
+        <div className="classesDiv" key={each._id} >
           <Link to={`${each._id}`}>
-          <h3>Class: {each.name}</h3>
+          <h3 id="classDivText">Class: {each.name}</h3>
           <img src={each.img}></img>        
           </Link>
         </div>
       ))}
+    </div>
     </div>
   )
 }

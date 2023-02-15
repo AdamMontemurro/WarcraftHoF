@@ -1,9 +1,10 @@
 const db = require('../db')
-const { Class, Person } = require('../models')
+const { Class, Person, Comment } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error '))
 
 const main = async () => {
+
 
   const warrior = await new Class(
     {
@@ -34,7 +35,7 @@ const main = async () => {
       primary_attribute: 'Agility',
       armor_type: 'Mail',
       specs: 'Marksman, Survival, Beast Mastery',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/iVwp1tK.png'
     })
   hunter.save()
 
@@ -45,7 +46,7 @@ const main = async () => {
       primary_attribute: 'Agility',
       armor_type: 'Plate',
       specs: 'Assassination, Outlaw, Subtlety',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/fowx8Y8.png'
     })
   rogue.save()
 
@@ -56,7 +57,7 @@ const main = async () => {
       primary_attribute: 'Intelect',
       armor_type: 'Cloth',
       specs: 'Holy, Discipline, Shadow',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/sEIvLvi.png'
     })
   priest.save()
 
@@ -67,7 +68,7 @@ const main = async () => {
       primary_attribute: 'Agility/Intelect',
       armor_type: 'Mail',
       specs: 'Elemental, Restoration, Enhancement',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/3HWVz51.png'
     })
   shaman.save()
 
@@ -78,7 +79,7 @@ const main = async () => {
       primary_attribute: 'Intelect',
       armor_type: 'Cloth',
       specs: 'Arcance, Frost, Fire',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/S9OcuKH.png'
     })
   mage.save()
 
@@ -89,7 +90,7 @@ const main = async () => {
       primary_attribute: 'Intelect',
       armor_type: 'Cloth',
       specs: 'Affliction, Demonology, Destruction',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/gRrVOPF.png'
     })
   warlock.save()
   const monk = await new Class(
@@ -110,7 +111,7 @@ const main = async () => {
       primary_attribute: 'Agility/Intelect',
       armor_type: 'Leather',
       specs: 'Feral(tank), Feral(damage), Restoration, Balance',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/4GcwFPE.png'
     })
   druid.save()
 
@@ -121,7 +122,7 @@ const main = async () => {
       primary_attribute: 'Agility',
       armor_type: 'Leather',
       specs: 'Havoc,Vengeance',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/i4Dn0KC.png'
     })
   demon_hunter.save()
 
@@ -132,7 +133,7 @@ const main = async () => {
       primary_attribute: 'Strength',
       armor_type: 'Plate',
       specs: 'Blood, Frost, Unholy',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/E3ujqot.png'
     })
   death_knight.save()
 
@@ -143,7 +144,7 @@ const main = async () => {
       primary_attribute: 'Intelect',
       armor_type: 'Mail',
       specs: 'Devastation, Preservation',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/zWaAIAQ.png'
     })
   evoker.save()
 
@@ -156,7 +157,7 @@ const main = async () => {
       class: shaman._id,
       status: "Alive",
       involvements: "Battle of Mt. Hyjal, Founding of Orgrimmar, The Shattering",
-      img: '../Pictures/Thrall.png',
+      img: 'https://i.imgur.com/Iucr8Nl.png',
     },
 
     {
@@ -165,13 +166,49 @@ const main = async () => {
       class: mage._id,
       status: "Alive",
       involvements: "The Third War, Founding of Theramore, Theramore's Fall",
-      img: '../Pictures/Jaina.png',
-    }
+      img: 'https://i.imgur.com/3ZOMS0j.png',
+    },
 
+    {
+      name: "Malfurion Stormrage",
+      race: "Night Elf",
+      class: druid._id,
+      status: "Dormant",
+      involvements: "War of the Ancients, The Third War, War of the Thorns",
+      img: 'https://i.imgur.com/46SKl1v.png',
+    },
+
+    {
+      name: "Medivh",
+      race: "Human",
+      class: mage._id,
+      status: "Deceased",
+      involvements: "The Gurubashi War, Opening of the Dark Portal, The Third War",
+      img: 'https://i.imgur.com/OUje4dQ.png',
+    }
   ]
 
-  await Person.insertMany(people)
+  const comments = [
+    {
+      username: "Arthas_STAN32",
+      comment: "I would really like to see Arthas added as the Litch King. He was the main villian during WC3 and first three expansions. He's personally my favorite character.",
 
+    },
+    {
+      username: "WoDwasOK",
+      comment: " I always thought Guldan was a really cool character",
+
+    },
+    {
+      username: "Spencman96",
+      comment: "I think you should add Pao to the Hall. His guild would be lost without him!",
+
+    },
+  ]
+
+
+  await Person.insertMany(people)
+  await Comment.insertMany(comments)
 }
 
 const run = async () => {

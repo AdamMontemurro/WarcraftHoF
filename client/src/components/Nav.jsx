@@ -7,11 +7,11 @@ const Nav = () => {
     <nav className="navbar">
       <h4>Nav</h4>
       <div>
-      <NavLink to="/">Home</NavLink>
+      <NavLink className="nav" to="/">Home</NavLink>
       <br></br>
-      <NavLink to="/Classes"> Classes</NavLink>
+      <NavLink className="nav" to="/Classes"> Classes</NavLink>
       <br></br>
-      <NavLink to="/hof">Hall of Fame</NavLink>
+      <NavLink className="nav" to="/hof">Hall of Fame</NavLink>
       </div>
     </nav>
   )
