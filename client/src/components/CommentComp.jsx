@@ -12,7 +12,7 @@ const CommentComp = (props) => {
 
   const handleDelete = async (e) => {
     e.preventDefault()
-    await axios.delete(`http://localhost:3001/comments/${props.id}`)
+    await axios.delete(`/comments/${props.id}`)
   }
 
 

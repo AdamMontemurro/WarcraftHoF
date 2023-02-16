@@ -11,7 +11,7 @@ const Comment = () => {
 
   const getComments = async () => {
     try {
-      let response = await axios.get('http://localhost:3001/comments/get')
+      let response = await axios.get('/comments/get')
       setCommentsArray(response.data.coms)
     } catch (error) {
       console.log(error)
@@ -53,7 +53,7 @@ const Comment = () => {
 
   const commentSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/comments/create', comment)
+    await axios.post('/comments/create', comment)
     newComment(
       {
         username: `${userName}`,

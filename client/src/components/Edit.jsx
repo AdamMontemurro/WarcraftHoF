@@ -5,7 +5,7 @@ const Edit = (props) => {
 
   const handleEdit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/comments/${props.id}`, editedComment)
+    await axios.put(`/comments/${props.id}`, editedComment)
     setEditedComment(
       {
         username: `${currentUser}`,

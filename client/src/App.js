@@ -21,7 +21,7 @@ function App() {
 
   const getClasses = async () => {
     try {
-      let response = await axios.get('http://localhost:3001/classes')
+      let response = await axios.get('/classes')
       setClasses(response.data.classes)
     } catch (error) {
       console.log(error)
@@ -30,7 +30,7 @@ function App() {
 
   const getHof = async () => {
     try {
-      let response = await axios.get('http://localhost:3001/people')
+      let response = await axios.get('/people')
       setPeople(response.data.get)
     } catch (error) {
       console.log(error)
