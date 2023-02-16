@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Classes from './components/Classes';
 import Hall from './components/Hall';
 import ClassDetails from './components/ClassDetails';
+import PersonDetail from './components/PersonDetail'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/hof" element={ <Hall people={people}/> } />
         <Route path="classes" element={ <Classes classes={classes}/>} />
         <Route path="classes/:id" element={<ClassDetails classes={classes}/>} />
+        <Route path="hof/:id" element={<PersonDetail people={people} />} />
         </Routes>
       </main>
 

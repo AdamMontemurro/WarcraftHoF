@@ -26,6 +26,8 @@ body {
 
 }
 
+
+
 #Classes {
   position: absolute;
   left: 35vh;
@@ -36,7 +38,7 @@ body {
 
 }
 
-#classDivText, .nav, h1 {
+#classDivText, .nav, h1, #personDivText, .classAttribute {
   font-family: 'Roboto', sans-serif;
   color: goldenrod;
   text-shadow: -1px 1px 2px #000,
@@ -66,7 +68,7 @@ body {
   margin: 4px
 }
 
-.classesDiv:hover {
+.classesDiv:hover, .personImg:hover {
   transform: scale(1.02);
 }
 
@@ -77,4 +79,42 @@ body {
 
 p {
   color:goldenrod
+}
+
+.personImg {
+  height: 400px;
+  width: 300px;
+  object-fit: contain;
+  border: solid 3px rgb(31, 31, 58);
+  background-color: rgb(164, 177, 177);
+}
+
+.personDetailImg {
+  height: 500px;
+  width: 400px;
+  object-fit: contain;
+}
+
+
+#welcome, #user, .classDetail {
+  color:rgb(164, 177, 177);
+  text-shadow: -1px 1px 2px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+
+#commentDiv {
+
+  background-color: rgb(22, 27, 27);
+} 
+
+
+#commentSubmitButton {
+  transition-duration: 0.5s;
+}
+
+#commentSubmitButton:hover {
+  background-color: #af8c4c; /* Green */
+  color: rgb(73, 66, 66);
 }

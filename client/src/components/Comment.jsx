@@ -73,7 +73,7 @@ const Comment = () => {
     comments = <Logout onClick={logout} />
     return (
       <div>
-        <h2>Welcome {userName}</h2>
+        <h2 id="welcome">Welcome {userName}</h2>
         {comments}
         <p>Who do you think we  should we add to the Hall of Fame, and why?</p>
         <form onSubmit={commentSubmit}>
@@ -83,7 +83,8 @@ const Comment = () => {
             rows="5"
             onChange={handleChange}
           >
-          </textarea><button type="submit" >submit</button>
+          </textarea><br></br>
+          <button id="commentSubmitButton" type="submit" >submit</button>
         </form>
 
 
@@ -96,7 +97,7 @@ const Comment = () => {
     comments = <Login onClick={login} />
     return (
       <div>
-        <p>Log in and leave a suggestion</p>
+        <p>Log in and leave your suggestion</p>
 
         <br></br>
         <p>Username:</p>

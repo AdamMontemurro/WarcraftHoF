@@ -40,8 +40,8 @@ const CommentComp = (props) => {
     )
   } else {
     return (
-      <div key={props.id}>
-        <h3>User: {props.username}</h3>
+      <div id="commentDiv" key={props.id}>
+        <h3 id="user">User: {props.username}</h3>
         <p>{props.comment}</p>
       </div>
     )

@@ -1,6 +1,7 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+
+import { useParams, useNavigate, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+
 
 const ClassDetails = (props) => {
 
@@ -11,14 +12,24 @@ const ClassDetails = (props) => {
     let selectedClass = props.classes.find(
       (x) => x._id === id
     )
-    console.log(selectedClass)
+
     setClass(selectedClass)
   }, [props.classes, id])
 
+const goBack =() => {
+  Navigate('/Classes')
+}
+
+
   return thisClass ? (
     <div>
-      Class Details
       <h1>{thisClass.name}</h1>
+      <img src={thisClass.img} alt="Class Insignia" />
+      <h2 className='classDetail'><span className='classAttribute'>Primary Attribute:</span> {thisClass.primary_attribute} </h2>
+      <h2 className='classDetail'><span className='classAttribute'>Role:</span> {thisClass.role}  </h2>
+      <h2 className='classDetail'><span className='classAttribute'>Specializations:</span> {thisClass.specs}</h2>
+      <h2 className='classDetail'><span className='classAttribute'>Description:</span></h2>
+      <button onClick={goBack}>Back</button>
     </div>
   ) : null
 
