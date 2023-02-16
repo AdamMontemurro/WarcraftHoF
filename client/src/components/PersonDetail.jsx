@@ -21,7 +21,12 @@ const PersonDetail = (props) => {
     setPerson(selectedPerson)
   }, [props.people, id])
 
-if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
+
+
+
+
+
+if (thisPerson.class === "63ee84867c15b2fa0a873bba") {
   return (
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
@@ -29,7 +34,7 @@ if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
       <button className="back" onClick={goBack}>Back</button>
     </div>
   )
-} else if (thisPerson.class === "63ed10e6edfa3b20759f9d41") {
+} else if (thisPerson.class === "63ee84867c15b2fa0a873bc3") {
   return (
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
@@ -37,7 +42,7 @@ if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
       <button className="back" onClick={goBack}>Back</button>
     </div>
   )
-}else if (thisPerson.class === "63ed10e6edfa3b20759f9d44") {
+}else if (thisPerson.class === "63ee84867c15b2fa0a873bbe") {
   return (
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
