@@ -7,6 +7,7 @@ const PersonDetail = (props) => {
 
   let {id} = useParams()
   const [thisPerson, setPerson] = useState('')
+  // const [specificClass, setClassID] = useState('')
   let navigate = useNavigate()
 
   const goBack = ()=> {
@@ -19,6 +20,12 @@ const PersonDetail = (props) => {
       (x) => x._id === id
     )
     setPerson(selectedPerson)
+
+    // let thisClass = props.classes.find(
+    //   (y) => y._id === thisPerson.class
+    // )
+    // setClassID(thisClass)
+
   }, [props.people, id])
 
 
@@ -34,7 +41,7 @@ if (thisPerson.class === "63ee84867c15b2fa0a873bba") {
       <button className="back" onClick={goBack}>Back</button>
     </div>
   )
-} else if (thisPerson.class === "63ee84867c15b2fa0a873bc3") {
+} else if (thisPerson.class === "63ee84867c15b2fa0a873bbb") {
   return (
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
