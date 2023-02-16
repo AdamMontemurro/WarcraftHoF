@@ -11,7 +11,7 @@ router.get('/', (req,res)=>
 
 
 router.get('/classes', controllers.getClasses)
-
+router.get('/people', controllers.getPeople)
 router.get('/classes/:id', controllers.getClassById)
 
 

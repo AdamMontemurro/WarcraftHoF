@@ -1,5 +1,6 @@
 const { Class } = require('../models/')
 const { Comment } = require("../models")
+const { Person } = require('../models')
 
 
 const getClasses = async (req, res) => {
@@ -20,7 +21,14 @@ const getComments = async (req, res) => {
   }
 }
 
-
+const getPeople = async (req,res) => {
+  try {
+    const get = await Person.find()
+    return res.status(200).json({get})
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 
 const getClassById = async (req, res) => {
   try {
@@ -76,5 +84,6 @@ module.exports = {
   newComment,
   deleteComment,
   updateComment,
-  getComments
+  getComments,
+  getPeople
 }

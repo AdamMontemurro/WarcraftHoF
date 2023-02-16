@@ -16,6 +16,7 @@ import axios from 'axios'
 function App() {
 
   const [classes, setClasses] = useState([])
+  const [people, setPeople] = useState([])
 
   const getClasses = async () => {
     try {
@@ -26,9 +27,19 @@ function App() {
     }
   }
 
+  const getHof = async () => {
+    try {
+      let response = await axios.get('http://localhost:3001/people')
+      setPeople(response.data.get)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
 
   useEffect(() => {
     getClasses()
+    getHof()
   }, [])
 
 
@@ -42,7 +53,7 @@ function App() {
       <main>
         <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="/hof" element={ <Hall/> } />
+        <Route path="/hof" element={ <Hall people={people}/> } />
         <Route path="classes" element={ <Classes classes={classes}/>} />
         <Route path="classes/:id" element={<ClassDetails classes={classes}/>} />
         </Routes>

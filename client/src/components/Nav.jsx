@@ -5,7 +5,7 @@ const Nav = () => {
 
   return (
     <nav className="navbar">
-      <h4>Nav</h4>
+      <h4 id="navTitle">WarcraftDB</h4>
       <div>
       <NavLink className="nav" to="/">Home</NavLink>
       <br></br>
