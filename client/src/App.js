@@ -54,10 +54,10 @@ function App() {
       <main>
         <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="/hof" element={ <Hall people={people} classes={classes} /> } />
+        <Route path="/hof" element={ <Hall people={people} /> } />
         <Route path="classes" element={ <Classes classes={classes}/>} />
         <Route path="classes/:id" element={<ClassDetails classes={classes}/>} />
-        <Route path="hof/:id" element={<PersonDetail people={people}  />} />
+        <Route path="hof/:id" element={<PersonDetail people={people} classes={classes} />} />
         </Routes>
       </main>
 
