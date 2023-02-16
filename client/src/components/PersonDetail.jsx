@@ -1,12 +1,17 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import PersonSpecifics from './PersonSpecifics'
+import { useNavigate } from 'react-router-dom'
 
 const PersonDetail = (props) => {
 
   let {id} = useParams()
   const [thisPerson, setPerson] = useState('')
+  let navigate = useNavigate()
 
+  const goBack = ()=> {
+  navigate('/hof')
+  }
 
 
   useEffect(()=> {
@@ -21,6 +26,7 @@ if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
       <h2 className='classDetail'><span className='classAttribute'>Class: </span>Shaman </h2>
+      <button className="back" onClick={goBack}>Back</button>
     </div>
   )
 } else if (thisPerson.class === "63ed10e6edfa3b20759f9d41") {
@@ -28,6 +34,7 @@ if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
       <h2 className='classDetail'><span className='classAttribute'>Class: </span>Mage </h2>
+      <button className="back" onClick={goBack}>Back</button>
     </div>
   )
 }else if (thisPerson.class === "63ed10e6edfa3b20759f9d44") {
@@ -35,6 +42,7 @@ if (thisPerson.class === "63ed10e6edfa3b20759f9d40") {
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
       <h2 className='classDetail'><span className='classAttribute'>Class: </span>Druid </h2>
+      <button className="back" onClick={goBack}>Back</button>
     </div>
   )
 }

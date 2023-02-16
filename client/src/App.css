@@ -110,11 +110,16 @@ p {
 } 
 
 
-#commentSubmitButton {
+#commentSubmitButton, .back {
   transition-duration: 0.5s;
+  background-color: rgb(164, 177, 177);
 }
 
-#commentSubmitButton:hover {
+#commentSubmitButton:hover, .back:hover {
   background-color: #af8c4c; /* Green */
   color: rgb(73, 66, 66);
+}
+
+#space {
+  height:100px
 }

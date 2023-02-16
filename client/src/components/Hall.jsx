@@ -23,6 +23,7 @@ function Hall({ people }) {
       <div id="commentSection">
       <Comment />
       </div>
+      <div id="space"></div>
     </div>
   )
 }

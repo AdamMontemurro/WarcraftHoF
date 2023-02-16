@@ -100,7 +100,7 @@ const main = async () => {
       primary_attribute: 'Agility/Intelect',
       armor_type: 'Leather',
       specs: 'Brewmaster, Mistweaver, Windwalker',
-      img: 'placeholder'
+      img: 'https://i.imgur.com/8rzdclO.png'
     })
   monk.save()
 

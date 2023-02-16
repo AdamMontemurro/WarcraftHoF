@@ -7,7 +7,8 @@ const ClassDetails = (props) => {
 
   let {id} = useParams()
   const [thisClass, setClass] = useState('')
-  
+  const navigate = useNavigate()
+
   useEffect(()=> {
     let selectedClass = props.classes.find(
       (x) => x._id === id
@@ -17,7 +18,7 @@ const ClassDetails = (props) => {
   }, [props.classes, id])
 
 const goBack =() => {
-  Navigate('/Classes')
+  navigate('/Classes')
 }
 
 
@@ -29,7 +30,7 @@ const goBack =() => {
       <h2 className='classDetail'><span className='classAttribute'>Role:</span> {thisClass.role}  </h2>
       <h2 className='classDetail'><span className='classAttribute'>Specializations:</span> {thisClass.specs}</h2>
       <h2 className='classDetail'><span className='classAttribute'>Description:</span></h2>
-      <button onClick={goBack}>Back</button>
+      <button className="back" onClick={goBack}>Back</button>
     </div>
   ) : null
 
