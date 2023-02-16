@@ -34,13 +34,14 @@ const PersonDetail = (props) => {
 
 
 // if (thisPerson.class === "63ee84867c15b2fa0a873bba") {
-  return (
+  
+return thisPerson ?(
     <div>
       <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
       <h2 className='classDetail'><span className='classAttribute'>Class: </span>{specificClass.name} </h2>
       <button className="back" onClick={goBack}>Back</button>
     </div>
-  )
+  ) :null
 // } else if (thisPerson.class === "63ee84867c15b2fa0a873bbb") {
   // return (
   //   <div>
