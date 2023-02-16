@@ -1,13 +1,12 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import PersonSpecifics from './PersonSpecifics'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 const PersonDetail = (props) => {
 
   let {id} = useParams()
   const [thisPerson, setPerson] = useState('')
-  const [specificClass, setClassID] = useState('')
   let navigate = useNavigate()
 
   const goBack = ()=> {
@@ -21,11 +20,6 @@ const PersonDetail = (props) => {
     )
     setPerson(selectedPerson)
 
-    let thisClass = props.classes.find(
-      (y) => y._id === thisPerson.class
-    )
-    setClassID(thisClass)
-
   }, [props.people, id])
 
 
@@ -33,15 +27,15 @@ const PersonDetail = (props) => {
 
 
 
-// if (thisPerson.class === "63ee84867c15b2fa0a873bba") {
+// if (thisPerson.class === classId) {
   
-return thisPerson ?(
+return(
     <div>
-      <PersonSpecifics img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
-      <h2 className='classDetail'><span className='classAttribute'>Class: </span>{specificClass.name} </h2>
+      <PersonSpecifics classes={props.classes} class={thisPerson.class} img={thisPerson.img} name={thisPerson.name} race={thisPerson.race} status={thisPerson.status} involvements={thisPerson.involvements} />
+      {/* <h2 className='classDetail'><span className='classAttribute'>Class: </span> {specificClass.name} </h2> */}
       <button className="back" onClick={goBack}>Back</button>
     </div>
-  ) :null
+  )
 // } else if (thisPerson.class === "63ee84867c15b2fa0a873bbb") {
   // return (
   //   <div>

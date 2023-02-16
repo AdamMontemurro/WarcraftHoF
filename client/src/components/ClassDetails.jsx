@@ -1,5 +1,5 @@
 
-import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import { useParams, useNavigate, } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 

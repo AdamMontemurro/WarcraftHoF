@@ -12,7 +12,7 @@ function Hall({ people }) {
       <div className="peopleContainer">
         {people.map((each) => (
           <div className="personDiv" key={each._id} >
-            <Link to={`${each._id}`}>
+            <Link to={`${each._id}`} state={{classId:each.class}}>
               <h3 id="personDivText">{each.name}</h3>
               <img className="personImg" src={each.img}></img>
             </Link>
