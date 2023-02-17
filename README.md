@@ -6,7 +6,7 @@
 ***
 
 ### ***Description***
-Single page MERN application that renders out significant characters from the Warcrat Universe. Gives details of them and their accomplishments from a backend DB. Users are able to "login" and add,edit, and delete suggestions in the form of comments. 
+Single page MERN application that renders out significant characters from the Warcrat Universe. Gives details of them and their accomplishments from a backend DB. Users are able to "login" and add,edit, and delete suggestions in the form of comments. g
 
 ## [Test it here](https://wcdbmernapp.herokuapp.com/Classes)
 
